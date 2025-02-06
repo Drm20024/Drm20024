@@ -1,1 +1,24 @@
+-- ایجاد دیتابیس
+CREATE DATABASE test_db;
 
+-- استفاده از دیتابیس
+USE test_db;
+
+-- ایجاد یک جدول ساده
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- درج دادههای تستی
+INSERT INTO users (username, email) VALUES
+('user1', 'user1@example.com'),
+('user2', 'user2@example.com'),
+('user3', 'user3@example.com');
+-- جستجوی کاربر بر اساس نام کاربری
+SELECT * FROM users WHERE username LIKE '%user%';
+
+-- جستجوی کاربر بر اساس ایمیل
+SELECT * FROM users WHERE email LIKE '%example.com%';
