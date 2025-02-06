@@ -1,7 +1,7 @@
 document.getElementById('loginForm').addEventListener('submit', function(event) {
        event.preventDefault();
-       const username = document.getElementById('username').value;
-       const password = document.getElementById('password').value;
+       const username = document.getElementById('Test').value;
+       const password = document.getElementById('1234').value;
        // ارسال اطلاعات به سرور برای بررسی
        fetch('/login', {
            method: 'POST',
